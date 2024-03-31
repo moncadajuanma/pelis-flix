@@ -22,10 +22,11 @@ function añadirPelícula() {
 }
 
 function recargarPeliculas() {
+    console.log(listaPeliculasFavoritas);
     var elementoListaPeliculas = document.getElementById('listaPeliculas');
     elementoListaPeliculas.innerHTML = '';
     for (i = 0; i < listaPeliculasFavoritas.length; i++) {
-        elementoListaPeliculas.innerHTML += `<a href=" ${listaTrailersFavoritas[i]} "><img src=" ${listaPeliculasFavoritas[i]} "></a>`;
+        elementoListaPeliculas.innerHTML += `<div class="contenedorImg"><a href=" ${listaTrailersFavoritas[i]} "><img src=" ${listaPeliculasFavoritas[i]} "></a></div>`;
     }
 }
 
@@ -38,21 +39,23 @@ function storageListas() {
     storage.setItem('listaCaratula', JSON.stringify(listaPeliculasFavoritas));
     storage.setItem('listaTrailer', JSON.stringify(listaTrailersFavoritas));
 }
-
-function recuperoListaPeliculas() {
-    // Se parsea para poder ser usado en js con JSON.parse :)
-    return listaPeliculasFavoritas = JSON.parse(storage.getItem("listaCaratula"));
-
-}
-
-function recuperoListaTailers() {
-    // Se parsea para poder ser usado en js con JSON.parse :)
-    // listaTrailersPeliculasFavoritas = storage.getItem("listaTrailer");
-    return listaTrailersFavoritas = JSON.parse(storage.getItem("listaTrailer"));
-}
+const button = document.getElementById("button");
+button.addEventListener("click", añadirPelícula);
 
 // Carga Automatica de variables almacenadas en localStorage
-//document.addEventListener("DOMContentLoaded", recuperoListas);
+document.addEventListener("DOMContentLoaded", () => {
+
+    if (!(storage.getItem("listaCaratula")) && !(storage.getItem("listaTrailer"))) {
+        return;
+    }
+
+    listaPeliculasFavoritas = JSON.parse(storage.getItem("listaCaratula"));
+    listaTrailersFavoritas = JSON.parse(storage.getItem("listaTrailer"));
+
+    // listaPeliculasFavoritas = imagen
+    // listaTrailersFavoritas = trailer;
+    recargarPeliculas()
+});
 
 
 

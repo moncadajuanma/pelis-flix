@@ -34,11 +34,22 @@ body {
 }
 
 #listaPeliculas {
+  width: 100%;
+  height: 40%;
+}
+
+#listaPeliculas a {
+  background-color: #ff0000;
+  width: 30%;
+  height: 40%;
   margin: 10px;
   max-height: 250px;
 }
 
-#listaPeliculas img {
+#listaPeliculas a img {
+  object-fit:cover;
+  width: 100%;
+  height: 100%;
   margin: 10px;
 }
 
