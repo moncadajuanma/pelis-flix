@@ -1,11 +1,7 @@
 body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  background-image: url("./4k-interstellar.jpg");
-  background-color: #000000;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
+  background: url("./33322.jpg") no-repeat center fixed;
   backdrop-filter: blur(4px);
 }
 
@@ -17,12 +13,13 @@ body {
 .page-title {
   color: #ff0000;
   margin: 0 0 5px;
-  font-size: 50px;
+  font-size: 80px;
+  font-weight: bold;
 }
 
 .page-subtitle {
-  color: #000000;
-  margin-top: 5px;
+  color: #ffffff;
+  margin-top: 20px;
 }
 
 .page-logo {
@@ -41,34 +38,44 @@ body {
   max-height: 250px;
 }
 
+#listaPeliculas img {
+  margin: 10px;
+}
+
 #listaPeliculas img:hover {
   transform: scale(1.01);
 }
 
 .form-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
   margin: 0 0 15px;
 }
 
 .form-wrapper input {
   display: block;
-  margin: 10 auto;
-  padding: 5px 30px;
+  margin: 5px auto;
+  padding: 5px 20px;
   width: 260px;
 }
 
 #mensajeDeError {
-  color: red;
+  font-size:medium;
+  color: rgb(255, 255, 255);
 }
 
 .form-wrapper button {
   border: 0;
   color: #ffffff;
-  background: #01B869;
+  background: #ff0000;
+  width: 200px;
   font-weight: bold;
-  padding: 15px 20px;
+  padding: 15px 15px;
   font-size: 16px;
   border-radius: 4px;
-  margin-top: 20px;
+  margin: 20px auto;
   cursor: pointer;
   transition: 0.3s;
 }
