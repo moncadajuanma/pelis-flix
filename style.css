@@ -1,8 +1,9 @@
 body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  background: url("./33322.jpg") no-repeat center fixed;
-  backdrop-filter: blur(4px);
+  background: url("./33322.jpg");
+  background-repeat:repeat-y;
+  backdrop-filter: blur(8px);
 }
 
 .container {
@@ -19,6 +20,8 @@ body {
 
 .page-subtitle {
   color: #ffffff;
+  font-size: 20px;
+  font-weight: bolder;
   margin-top: 20px;
 }
 
@@ -42,7 +45,7 @@ body {
   height: 40%;
 }
 
-.contenedorImg{
+.contenedorImg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,17 +68,18 @@ body {
 }
 
 #listaPeliculas a img {
-  object-fit:cover;
+  object-fit: cover;
   width: 100%;
   height: 100%;
   border-radius: 10px;
   margin: 10px;
   box-shadow: 0px 0px 10px black;
-  /* margin: 10px; */
 }
 
 #listaPeliculas img:hover {
-  transform: scale(1.01);
+  transform: scale(1.05);
+  transition: 0.3s;
+  opacity: 0.8;
 }
 
 .form-wrapper {
@@ -86,15 +90,22 @@ body {
   margin: 0 0 15px;
 }
 
+.form-wrapper label {
+  font-size: 14px;
+  color: #ffffff;
+}
+
 .form-wrapper input {
   display: block;
-  margin: 5px auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border-color: #ff0000;
   padding: 5px 20px;
   width: 260px;
 }
 
 #mensajeDeError {
-  font-size:medium;
+  font-size: medium;
   color: rgb(255, 255, 255);
 }
 
@@ -107,11 +118,20 @@ body {
   padding: 15px 15px;
   font-size: 16px;
   border-radius: 4px;
-  margin: 20px auto;
+  margin: 5px auto;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .form-wrapper button:hover {
+  transform: scale(1.05);
   opacity: 0.7;
+}
+
+@media screen and (max-width: 720px) {
+
+  body {
+    
+  }
+  
 }

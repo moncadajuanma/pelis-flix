@@ -16,11 +16,17 @@ function añadirPelícula() {
         recargarPeliculas();
 
     } else {
-        document.getElementById('mensajeDeError').innerHTML = 'Dirección de imagen no válida, inténtalo de nuevo';
+        Swal.fire({
+            position: 'center',
+            icon: 'error',
+            title: 'Dirección de imagen no válida, inténtalo de nuevo',
+            showConfirmButton: false,
+            timer: 2500
+        })
         limpiarCampos();
     }
 }
-
+//Dirección de imagen no válida, inténtalo de nuevo
 function recargarPeliculas() {
     console.log(listaPeliculasFavoritas);
     var elementoListaPeliculas = document.getElementById('listaPeliculas');
