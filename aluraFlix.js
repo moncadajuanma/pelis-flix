@@ -26,7 +26,9 @@ function recargarPeliculas() {
     var elementoListaPeliculas = document.getElementById('listaPeliculas');
     elementoListaPeliculas.innerHTML = '';
     for (i = 0; i < listaPeliculasFavoritas.length; i++) {
-        elementoListaPeliculas.innerHTML += `<div class="contenedorImg"><a target="_blank"  href=" ${listaTrailersFavoritas[i]} "><img src=" ${listaPeliculasFavoritas[i]} "></a></div>`;
+        elementoListaPeliculas.innerHTML += `<div class="contenedorImg">
+                                             <a target="_blank"  href=" ${listaTrailersFavoritas[i]} "><img src=" ${listaPeliculasFavoritas[i]} "></a>
+                                             </div>`;
     }
 }
 
@@ -39,6 +41,7 @@ function storageListas() {
     storage.setItem('listaCaratula', JSON.stringify(listaPeliculasFavoritas));
     storage.setItem('listaTrailer', JSON.stringify(listaTrailersFavoritas));
 }
+
 let button = document.getElementById("button");
 button.addEventListener("click", añadirPelícula);
 
@@ -48,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!(storage.getItem("listaCaratula")) && !(storage.getItem("listaTrailer"))) {
         return;
     }
-
     listaPeliculasFavoritas = JSON.parse(storage.getItem("listaCaratula"));
     listaTrailersFavoritas = JSON.parse(storage.getItem("listaTrailer"));
     recargarPeliculas()

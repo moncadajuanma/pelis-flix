@@ -51,7 +51,7 @@ body {
   margin: 10px;
 }
 
-.containImg {
+.containerImg {
   display: flex;
   justify-content: center;
   align-items: center;
