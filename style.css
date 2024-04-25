@@ -3,7 +3,7 @@ body {
   text-align: center;
   background: url("./pexels-tima.jpg");
   background-repeat:repeat-y;
-  backdrop-filter: blur(8px);
+/*   backdrop-filter: blur(8px); */
 }
 
 .container {
