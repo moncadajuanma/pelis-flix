@@ -2,8 +2,9 @@ body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
   background: url("./pexels-tima.jpg");
+  background-size: cover;
   background-repeat:repeat-y;
-/*   backdrop-filter: blur(8px); */
+  backdrop-filter: grayscale(100%);
 }
 
 .container {
