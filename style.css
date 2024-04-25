@@ -1,7 +1,7 @@
 body {
   font-family: "Roboto Mono", monospace;
   text-align: center;
-  background: url("https://images.pexels.com/photos/7991486/pexels-photo-7991486.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background: url("./pexels-tima");
   background-repeat:repeat-y;
   backdrop-filter: blur(8px);
 }
